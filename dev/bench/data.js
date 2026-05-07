@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1778069161171,
+  "lastUpdate": 1778140657641,
   "repoUrl": "https://github.com/py-pdf/pypdf",
   "entries": {
     "CPython Benchmark": [
@@ -94847,6 +94847,72 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0018925495630769584",
             "extra": "mean: 634.7239918000241 msec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "96178532+stefan6419846@users.noreply.github.com",
+            "name": "Stefan",
+            "username": "stefan6419846"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a5e52ce33e66ff1046dbb4c5c00dab12ef70d1e4",
+          "message": "DEV: Enable PyPy testing again (#3752)\n\nThe verbosity issues have been fixed upstream.\n\nNevertheless, at the moment the runner images still ship the old version and there is a regression with *Pillow* we have to work around in our tests.",
+          "timestamp": "2026-05-07T09:54:45+02:00",
+          "tree_id": "c42930f06cbabf89907b26509cb3a02584703955",
+          "url": "https://github.com/py-pdf/pypdf/commit/a5e52ce33e66ff1046dbb4c5c00dab12ef70d1e4"
+        },
+        "date": 1778140651548,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 2.9417438689543705,
+            "unit": "iter/sec",
+            "range": "stddev: 0.006570624558753944",
+            "extra": "mean: 339.93442139999956 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 18.731088028195927,
+            "unit": "iter/sec",
+            "range": "stddev: 0.004723521095403976",
+            "extra": "mean: 53.3871817000005 msec\nrounds: 20"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.2698171676861222,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0277915929553285",
+            "extra": "mean: 3.7062133910000057 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 18.54871653410356,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0012662525929823757",
+            "extra": "mean: 53.91208594737033 msec\nrounds: 19"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.08759615343699556,
+            "unit": "iter/sec",
+            "range": "stddev: 0.022851901447209663",
+            "extra": "mean: 11.416026398000003 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_large_compressed_image_performance",
+            "value": 1.4931976767624349,
+            "unit": "iter/sec",
+            "range": "stddev: 0.001348504121552326",
+            "extra": "mean: 669.7036939999862 msec\nrounds: 5"
           }
         ]
       }
