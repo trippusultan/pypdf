@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1778230609350,
+  "lastUpdate": 1778333262859,
   "repoUrl": "https://github.com/py-pdf/pypdf",
   "entries": {
     "CPython Benchmark": [
@@ -94979,6 +94979,72 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.004426164187613419",
             "extra": "mean: 670.841096599986 msec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "96178532+stefan6419846@users.noreply.github.com",
+            "name": "stefan6419846",
+            "username": "stefan6419846"
+          },
+          "committer": {
+            "email": "96178532+stefan6419846@users.noreply.github.com",
+            "name": "stefan6419846",
+            "username": "stefan6419846"
+          },
+          "distinct": true,
+          "id": "c2db28d614ba97d78b37e107abe4fa969f6e4561",
+          "message": "REL: 6.11.0\n\n## What's new\n\n### New Features (ENH)\n- Initialise a Font from an embedded font file (#3704) by @PJBrs\n\n### Robustness (ROB)\n- Allow to fix AES padding length in non-strict mode (#3742) by @stefan6419846\n\n### Developer Experience (DEV)\n- Enable PyPy testing again (#3752) by @stefan6419846\n- Align mypy Makefile target with strict mode (#3690) by @costajohnt\n\n[Full Changelog](https://github.com/py-pdf/pypdf/compare/6.10.2...6.11.0)",
+          "timestamp": "2026-05-09T15:24:53+02:00",
+          "tree_id": "7816501f5f3c4d8a3edd60d5bc3e7fd1000865eb",
+          "url": "https://github.com/py-pdf/pypdf/commit/c2db28d614ba97d78b37e107abe4fa969f6e4561"
+        },
+        "date": 1778333255238,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 3.4479955186319113,
+            "unit": "iter/sec",
+            "range": "stddev: 0.005320049773350853",
+            "extra": "mean: 290.0235788000032 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 24.081239521817434,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00442423169233384",
+            "extra": "mean: 41.5261016399927 msec\nrounds: 25"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.3163200753716343,
+            "unit": "iter/sec",
+            "range": "stddev: 0.010707905125133399",
+            "extra": "mean: 3.1613548359999983 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 17.84400651732071,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005239786560768621",
+            "extra": "mean: 56.04122588889027 msec\nrounds: 18"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.09824034128004216,
+            "unit": "iter/sec",
+            "range": "stddev: 0.022739357875021564",
+            "extra": "mean: 10.17911773279999 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_large_compressed_image_performance",
+            "value": 1.5799385829716366,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005439020251753112",
+            "extra": "mean: 632.9359955999962 msec\nrounds: 5"
           }
         ]
       }
