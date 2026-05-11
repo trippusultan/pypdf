@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1778418315688,
+  "lastUpdate": 1778487770072,
   "repoUrl": "https://github.com/py-pdf/pypdf",
   "entries": {
     "CPython Benchmark": [
@@ -95111,6 +95111,72 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.002111545693873857",
             "extra": "mean: 668.8838939999982 msec\nrounds: 5"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "5440428@alunouninter.com",
+            "name": "Mateus Scheuer Macedo",
+            "username": "MestreY0d4-Uninter"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b285b1cb76fe49feb1cc52fbb6c3bdd9648a0960",
+          "message": "MAINT: Use placeholder-based approach for logger_warning (#3746)\n\nThis is the second PR for #3384 and covers logger_warning.\nIt updates logger_warning to support placeholder-based logging,\nconverts logger_warning call sites away from f-strings, and adds\nregression coverage for placeholder and no-placeholder cases.",
+          "timestamp": "2026-05-11T10:20:09+02:00",
+          "tree_id": "aa8351529f1807b6d280b62fdc503aadd419c455",
+          "url": "https://github.com/py-pdf/pypdf/commit/b285b1cb76fe49feb1cc52fbb6c3bdd9648a0960"
+        },
+        "date": 1778487764771,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_page_operations",
+            "value": 3.1778850360021456,
+            "unit": "iter/sec",
+            "range": "stddev: 0.004116412152895462",
+            "extra": "mean: 314.67469359999996 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_merge",
+            "value": 19.80262129504629,
+            "unit": "iter/sec",
+            "range": "stddev: 0.004432459616272441",
+            "extra": "mean: 50.498365095238896 msec\nrounds: 21"
+          },
+          {
+            "name": "tests/bench.py::test_text_extraction",
+            "value": 0.29323538449650155,
+            "unit": "iter/sec",
+            "range": "stddev: 0.018546512615641123",
+            "extra": "mean: 3.410229640999995 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_read_string_from_stream_performance",
+            "value": 17.76143590599792,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0026685854673874285",
+            "extra": "mean: 56.301754277778095 msec\nrounds: 18"
+          },
+          {
+            "name": "tests/bench.py::test_image_new_property_performance",
+            "value": 0.08711687931820888,
+            "unit": "iter/sec",
+            "range": "stddev: 0.03430888716504404",
+            "extra": "mean: 11.478831746799994 sec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_large_compressed_image_performance",
+            "value": 1.6373580289014942,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0025866806898566684",
+            "extra": "mean: 610.7399740000062 msec\nrounds: 5"
           }
         ]
       }
