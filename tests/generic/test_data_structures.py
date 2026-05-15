@@ -306,3 +306,32 @@ startxref
     reader = PdfReader(buffer, strict=False)
     with pytest.raises(expected_exception=PdfReadError, match=r"^Cannot find Root object in pdf$"):
         assert len(reader.pages) == 0
+
+def test_treeobject_insert_child_no_keyerror_on_missing_next_key() -> None:
+    """Test that insert_child does not raise KeyError on freshly-created children.
+
+    When inserting a child before a node that has no /Prev key (i.e. when the
+    TreeObject has exactly one existing child), the except branch of insert_child
+    previously called ``del child_obj["/Next"]`` which raised KeyError because
+    a fresh child has no /Next key yet. The fix uses ``child_obj.pop(...)`` so
+    the KeyError is not raised.
+
+    Reproduces: py-pdf/pypdf#3727
+    """
+    from pypdf.generic import NameObject, TextStringObject, TreeObject
+
+    writer = PdfWriter()
+    tree = TreeObject()
+    writer._add_object(tree)
+
+    child1 = TreeObject()
+    child1[NameObject("/Foo")] = TextStringObject("first")
+
+    # Insert first child
+    writer._add_object(child1)
+
+    child2 = TreeObject()
+    child2[NameObject("/Bar")] = TextStringObject("second")
+
+    # Insert second child BEFORE the first — this exercised the except branch
+    tree.insert_child(child2, before=child1, pdf=writer)
