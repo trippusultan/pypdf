@@ -1,7 +1,7 @@
 """Test for TreeObject.insert_child KeyError fix (#3727)."""
 
-from pypdf.generic import NameObject, TextStringObject, TreeObject
 from pypdf import PdfWriter
+from pypdf.generic import NameObject, TextStringObject, TreeObject
 
 
 def test_treeobject_insert_child_no_keyerror_on_missing_next_key() -> None:
